@@ -36,7 +36,10 @@ ENV GOOGLE_API_KEY='AIzaSyCopFldRoxw7xAL5fe3Rc2-RuvMMgIqntk'
 ENV TESSERACT_CMD='/usr/bin/tesseract'
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 10000
 
 # Command to run the application
-CMD ["python", "rag_backend.py"]
+#CMD ["python", "rag_backend.py"]
+
+# Use Gunicorn for production
+CMD ["gunicorn", "app:rag_backend", "--bind", "0.0.0.0:10000"]
