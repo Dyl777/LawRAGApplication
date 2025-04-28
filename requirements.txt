@@ -1,0 +1,12 @@
+flask
+flask-cors
+PyPDF2
+pytesseract
+tesseract
+Pillow
+python-docx
+langchain-community
+langchain-google-genai
+google-generativeai
+faiss-cpu
+werkzeug
